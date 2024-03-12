@@ -19,4 +19,16 @@ INSERT INTO question (category, difficulty_level, right_answer, option4, option3
                                                                                                                         ('C++', 'Easy', 'option4', 'Alternative 4', 'Alternative 3', 'Alternative 2', 'Alternative 1', 'What is C++?'),
                                                                                                                         ('SQL', 'Medium', 'option1', 'Var 4', 'Var 3', 'Var 2', 'Var 1', 'What is SQL?'),
                                                                                                                         ('SQL', 'Medium', 'option1', 'Var 4', 'Var 3', 'Var 2', 'Var 1', 'What is SQL?'),
-                                                                                                                        ('SQL', 'Medium', 'option1', 'Var 4', 'Var 3', 'Var 2', 'Var 1', 'What is SQL?');
+
+                                                                                                                      ('SQL', 'Medium', 'option1', 'Var 4', 'Var 3', 'Var 2', 'Var 1', 'What is SQL?');
+
+INSERT INTO role (name) VALUES
+                             ('ADMIN'),
+                             ('TEACHER'),
+                             ('STUDENT');
+
+INSERT INTO users (username, password, enabled, role_id) VALUES
+                                                             ('Selman', '123123', true, 1),
+                                                             ('Bruce', 'captain', true, 2),
+                                                             ('Haku', 'lake', true, 3);
+

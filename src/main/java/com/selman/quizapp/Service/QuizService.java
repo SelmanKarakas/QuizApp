@@ -6,7 +6,7 @@ import com.selman.quizapp.Entity.Quiz;
 import com.selman.quizapp.Entity.Response;
 import com.selman.quizapp.Repository.QuestionRepository;
 import com.selman.quizapp.Repository.QuizRepository;
-import jakarta.persistence.ManyToMany;
+import javax.persistence.ManyToMany;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
