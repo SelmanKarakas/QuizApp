@@ -24,10 +24,7 @@ public class SecurityConfig {
         return http
                 .authorizeRequests()
                 .antMatchers(
-                        "/",
-                        "/login",
-                        "/assets/**",
-                        "/images/**"
+                        "/resources/**", "/static/**", "/css/**", "/images/**", "/", "login"
                 ).permitAll()
                 .anyRequest().authenticated()
                 .and()

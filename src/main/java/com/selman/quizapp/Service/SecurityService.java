@@ -3,7 +3,6 @@ package com.selman.quizapp.Service;
 import com.selman.quizapp.Entity.User;
 import com.selman.quizapp.Entity.UserPrincipal;
 import com.selman.quizapp.Repository.UserRepository;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

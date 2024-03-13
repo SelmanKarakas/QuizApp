@@ -2,9 +2,7 @@ package com.selman.quizapp.Config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.Authentication;
-
 import org.springframework.security.core.authority.AuthorityUtils;
-
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 import javax.servlet.ServletException;
@@ -35,7 +33,7 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler {
         }
 
         if (roles.contains("Teacher"))  {
-            response.sendRedirect("/Home");
+            response.sendRedirect("/home");
         }
 
     }
