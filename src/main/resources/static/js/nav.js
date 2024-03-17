@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function openMenu() {
-        menuIcon.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
+        menuIcon.classList.add('active');
+        menuOverlay.classList.add('active');
     }
 
-    function closeMenu(){
+    function closeMenu() {
         menuIcon.classList.remove('active');
         menuOverlay.classList.remove('active');
     }
@@ -51,5 +51,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const slider = document.querySelector('.slider');
+    const leftArrow = document.querySelector('.left');
+    const rightArrow = document.querySelector('.right');
+    const indicatorParents = document.querySelector('.control ul');
+    let sectionIndex = 0;
+    const totalSlides = slider.querySelectorAll('section').length;
 
+    function setIndex() {
+        document.querySelectorAll('.control li').forEach((indicator) => {
+            indicator.classList.remove('selected');
+        });
+        slider.style.transform = 'translate(' + (sectionIndex) * -20 + '%)';
+        indicatorParents.children[sectionIndex].classList.add('selected');
+    }
+
+    document.querySelectorAll('.control li').forEach(function (indicator, ind) {
+        indicator.addEventListener('click', function () {
+            sectionIndex = ind;
+            setIndex();
+        });
+    });
+
+    leftArrow.addEventListener('click', function () {
+        sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : totalSlides - 1;
+        setIndex();
+    });
+
+    rightArrow.addEventListener('click', function () {
+        sectionIndex = (sectionIndex < totalSlides - 1) ? sectionIndex + 1 : 0;
+        setIndex();
+    });
 });
