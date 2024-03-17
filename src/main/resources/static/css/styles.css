@@ -5,19 +5,56 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../images/background.jpeg');
-    background-size: cover;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-header {
+    text-align: center;
+    color: white;
+    padding: 60px;
+
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.news-item {
+    width: 22%;
+    background-color: #f2f2f2;
+    padding: 10px; margin: 10px;
+}
+
+.news-item img {
+    width: 100%;
 }
 
 .login-container {
     position: relative;
-    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
     height: 300px;
     margin: auto;
+}
+#login-page {
+    background-image: url('../images/background.jpeg');
+    background-size: cover;
 }
 
 .input-group {

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 3% 17px 1%;
+    background-color: #5a4d7c;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.close-menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.active {
+    top: -80px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    padding-left: 25px;
+    color: #ffffff;
+
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+    transition: left 0.3s;
+    cursor: pointer;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #674ea7;
+    padding: 18px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.menu-overlay.active {
+    left: 0%;
+}
+
+.menu {
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: #5a4d7c;
+    height: 100%;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 20px 10px;
+}
+
+.menu-links li {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.menu-links li::after{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    padding: 10px;
+    border-radius: 3px;
+    display: block;
+}
+
+.menu-links a:hover {
+    color: #98bf64;
+    background-color: #674ea7;
+}
+
+.menu-links a:hover::after {
+    width: calc(100% - 20px);
+}
+
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #98bf64;
+}
+.logo-text-ham {
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo-text {
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 25px;
+    position: relative;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+    padding-bottom:20px ;
+}
+
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links .active-link::after {
+    width: 100%;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 16px;
+    position: relative;
+
+}
+
+.lang-tr,
+.lang-uy {
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.lang-tr:hover,
+.lang-uy:hover {
+    text-decoration: underline;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+    top: 1px;
+    padding-right: 10px;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-overlay.active {
+        left: 0;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .close-menu-icon {
+        display: block;
+    }
+}
