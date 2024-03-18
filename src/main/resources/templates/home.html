@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 
-<head  th:replace="Navbar.html"></head>
+<head th:replace="Navbar.html"></head>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,31 @@
 <div class="container">
     <div class="carousel">
         <div class="slider">
-            <section class="slide1"></section>
-            <section class="slide2"></section>
-            <section class="slide3"></section>
-            <section class="slide4"></section>
-            <section class="slide5"></section>
+            <section class="slide1" data-link="#">
+                <h2>İftar Buluşması nasıl geçti?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur consectetur
+                    adipisicing elit</p>
+            </section>
+            <section class="slide2">
+                <h2>Ana Başlık 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur consectetur
+                    adipisicing elit</p>
+            </section>
+            <section class="slide3">
+                <h2>Ana Başlık 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur consectetur
+                    adipisicing elit</p>
+            </section>
+            <section class="slide4">
+                <h2>Ana Başlık 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur consectetur
+                    adipisicing elit</p>
+            </section>
+            <section class="slide5">
+                <h2>Ana Başlık 5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur consectetur
+                    adipisicing elit</p>
+            </section>
         </div>
         <div class="control">
             <span class="arrow left"><i class="material-icons">keyboard_arrow_left</i></span>
@@ -32,6 +52,68 @@
         </div>
     </div>
 </div>
+
+<div class="news-section">
+    <div class="news-title"><h2>HABERLER</h2></div>
+    <div class="news-container">
+        <div class="news-box news-box-1">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Vagabond </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias delectus dolor, dolorem doloremque enim eos,
+                    excepturi fugiat illum, iste iure modi nemo nisi quos repellat tempora velit voluptates! Doloremque.</p>
+            </div>
+        </div>
+        <div class="news-box news-box-2">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Başlık 2</h3>
+                <p>Açıklama 2</p>
+            </div>
+        </div>
+        <div class="news-box news-box-3">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Başlık 3</h3>
+                <p>Açıklama 3</p>
+            </div>
+        </div>
+        <div class="news-box news-box-4">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Başlık 4</h3>
+                <p>Açıklama 4</p>
+            </div>
+        </div>
+        <div class="news-box news-box-5">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Başlık 5</h3>
+                <p>Açıklama 5</p>
+            </div>
+        </div>
+        <div class="news-box news-box-6">
+            <div class="news-image"></div>
+            <div class="news-content">
+                <h3>Başlık 6</h3>
+                <p>Açıklama 6</p>
+            </div>
+        </div>
+        <!-- Diğer haber kutuları -->
+
+
+    </div>
+    <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+        </div>
+    </div>
+</div>
+
+
+<h3>Başlık 6</h3>
+<p>Açıklama 6</p><h3>Başlık 6</h3>
+<p>Açıklama 6</p>
 
 <script type="text/javascript" th:src="@{/js/nav.js}"></script>
 </body>

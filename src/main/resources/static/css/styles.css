@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 * {
@@ -134,7 +135,7 @@ body {
 }
 
 .social-links {
-    position: absolute;
+    position: relative;
     bottom: 20px;
     left: 20px;
 }
@@ -279,16 +280,58 @@ body {
     height: 100%;
     display: flex;
     width: 500%;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .slider section {
     flex-basis: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.slider section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.slider section h2,
+.slider section p {
+    width: calc(100% - 40px);
+    max-width: 600px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 80px;
+    z-index: 3;
+}
+.slider section h2 {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 55px;
+}
+.slider section p {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 850px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .slider section.slide1 {
@@ -336,7 +379,6 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
-
 }
 .control ul li {
     width: 14px;
@@ -344,13 +386,126 @@ body {
     border: 2px solid #333;
     border-radius: 50px;
     margin: 10px;
-    background: #333;
+    background: #ffebee;
     cursor: pointer;
 }
 .control ul li.selected{
-    background: transparent;
+    background: #124559;
 }
 
+.news-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.news-title {
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+.news-container {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    padding: 15px 15px 20px;
+}
+
+.news-box {
+    flex: 0 0 auto;
+    width: 470px; /* Kutu genişliği */
+    height: 500px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+    transition: box-shadow 0.3s; /* Gölgelendirme için geçiş efekti */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.news-box.news-box-1 .news-image {
+    background-image: url("/static/images/box1.png");
+}
+.news-box.news-box-2 .news-image {
+    background-image: url("/static/images/box2.png");
+}
+.news-box.news-box-3 .news-image {
+    background-image: url("/static/images/box3.png");
+}
+.news-box.news-box-4 .news-image {
+    background-image: url("/static/images/box4.png");
+}
+.news-box.news-box-5 .news-image {
+    background-image: url("/static/images/box5.png");
+}
+.news-box.news-box-6 .news-image {
+    background-image: url("/static/images/box6.png");
+}
+
+.news-box:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Kutu üzerine gelindiğinde gölgeyi büyüt */
+}
+
+.news-image {
+    height: 300px; /* Görsel kutu yüksekliği */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+
+.news-content h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.news-content p {
+    color: #666;
+}
+
+.slider-scrollbar {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 3px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 4px;
+}
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    background: #124559;
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+
+}
 @media (max-width: 768px) {
 
     .nav-links {

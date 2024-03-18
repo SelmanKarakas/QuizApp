@@ -58,6 +58,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let sectionIndex = 0;
     const totalSlides = slider.querySelectorAll('section').length;
 
+    let slideInterval = setInterval(function () {
+        sectionIndex = (sectionIndex < totalSlides - 1) ? sectionIndex + 1 : 0;
+        setIndex();
+    }, 5000);
+
+    slider.addEventListener("mouseenter", function () {
+        clearInterval(slideInterval);
+    });
+
+    slider.addEventListener("mouseleave", function () {
+        slideInterval = setInterval(function () {
+            sectionIndex = (sectionIndex < totalSlides - 1) ? sectionIndex + 1 : 0;
+            setIndex();
+        }, 5000);
+    });
+
     function setIndex() {
         document.querySelectorAll('.control li').forEach((indicator) => {
             indicator.classList.remove('selected');
@@ -82,4 +98,42 @@ document.addEventListener("DOMContentLoaded", function () {
         sectionIndex = (sectionIndex < totalSlides - 1) ? sectionIndex + 1 : 0;
         setIndex();
     });
+
+    const sliderScrollbar = document.querySelector(".news-section .slider-scrollbar");
+    const scrollbarThumb = sliderScrollbar.querySelector('.scrollbar-thumb');
+    const imageList = document.querySelector(".news-container ");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+    let isDragging = false;
+    let startX;
+    let thumbStartPosition;
+
+    scrollbarThumb.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        thumbStartPosition = scrollbarThumb.offsetLeft;
+
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+    });
+
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+
+        const deltaX = e.clientX - startX;
+        const newThumbPosition = thumbStartPosition + deltaX;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+
+        const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+        const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+        scrollbarThumb.style.left = `${boundedPosition}px`;
+        imageList.scrollLeft = scrollPosition;
+    };
+
+    const handleMouseUp = () => {
+        isDragging = false;
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+    };
 });
