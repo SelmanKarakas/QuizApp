@@ -15,7 +15,8 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    background: linear-gradient(to right bottom, #496989, #58A399, #E2F4C5);
+    background-color: #fdfdfe;
+
 }
 
 .navbar {
@@ -23,7 +24,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 17px 3% 17px 1%;
-    background-color: #01161E;
+    /*background-color: #01161E;*/
+    background-color: #861364;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     position: fixed;
     top: 0;
@@ -39,7 +41,7 @@ body {
     position: absolute;
     top: 17px;
     right: 20px;
-    color: #EFF6E0;
+    color: #fdfdfe;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
@@ -53,7 +55,7 @@ body {
     font-size: 25px;
     font-weight: 600;
     padding-left: 25px;
-    color: #ffffff;
+    color: #fdfdfe;
 
 }
 
@@ -73,7 +75,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #124559;
+    background-color: #912a73;
     padding: 18px 20px;
     border-radius: 0px 15px 5px 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -92,7 +94,7 @@ body {
     left: 0;
     width: 100%;
     max-width: 300px;
-    background-color: #598392;
+    background-color: #f2e6ee;
     height: 100%;
     box-shadow: 7px 2px 7px rgba(0, 0, 0, 0.4);
 }
@@ -110,27 +112,31 @@ body {
 .menu-links li::after{
     content: '';
     position: absolute;
-    bottom: -4px;
+
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #AEC3B0;
+    background-color: #861364;
 }
 
 .menu-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #912a73;
     font-weight: bold;
     font-size: 20px;
     transition: background-color 0.3s;
     padding: 10px;
-    border-radius: 3px;
     display: block;
+    border-radius: 4px;
 }
 
 .menu-links a:hover {
     color: #EFF6E0;
-    background-color: #124559;
+    background-color: #a95991;
+}
+.menu-links i {
+    margin-right: 13px;
+    font-size: 18px;
 }
 
 .menu-links a:hover::after {
@@ -150,13 +156,13 @@ body {
 
 .social-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #9e4282;
     font-size: 24px;
     transition: color 0.3s;
 }
 
 .social-links a:hover {
-    color: #124559;
+    color: #861364;
 }
 .logo-text-ham {
     font-size: 25px;
@@ -339,7 +345,7 @@ body {
 }
 
 .slider section.slide1 {
-    background-image: url("/static/images/Ekran görüntüsü 2024-03-17 223907.png");
+    background-image: url("/static/images/Ekran Görüntüsü (2).png");
 }
 .slider section.slide2 {
     background-image: url("/static/images/indir.jpeg");
@@ -358,7 +364,7 @@ body {
     top: 50%;
     cursor: pointer;
     transform: translateY(-50%);
-    background-color: rgba(89, 131, 146, 0.5);
+    background-color: rgb(206, 159, 192);
     border-radius: 20%;
     padding: 3px 0px 0px 0px;
 }
@@ -394,7 +400,7 @@ body {
     cursor: pointer;
 }
 .control ul li.selected{
-    background: #124559;
+    background: #861364;
 }
 
 .news-section {
@@ -406,7 +412,7 @@ body {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: #f2f2f2;
+    color: #861364;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -414,7 +420,7 @@ body {
     display: flex;
     gap: 20px;
     padding: 15px 15px 20px;
-    overflow-x: hidden;
+    overflow-x: scroll;
 }
 
 .news-box {
@@ -422,11 +428,12 @@ body {
     width: 470px; /* Kutu genişliği */
     height: 500px;
     padding: 10px;
-    background-color: #fafdf4;
+    background-color: #fdfdfe;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
     transition: box-shadow 0.3s; /* Gölgelendirme için geçiş efekti */
     cursor: pointer;
     border-radius: 10px;
+    border: 2px solid rgba(133, 19, 100, 0.9);
 }
 
 .news-box.news-box-1 .news-image {
@@ -470,48 +477,6 @@ body {
     color: #666;
 }
 
-.slider-scrollbar {
-    height: 24px;
-    display: flex;
-    align-items: center;
-    margin-left: 15px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.slider-scrollbar .scrollbar-track {
-    height: 3px;
-    width: 100%;
-    background: #ccc;
-    position: relative;
-    border-radius: 4px;
-}
-.slider-scrollbar:hover .scrollbar-track {
-    height: 4px;
-}
-.slider-scrollbar .scrollbar-thumb {
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    background: #124559;
-    border-radius: inherit;
-    cursor: grab;
-}
-
-.slider-scrollbar .scrollbar-thumb:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
-    bottom: -10px;
-}
 .about-section {
     text-align: center;
     margin: 50px 100px;
@@ -539,21 +504,21 @@ body {
     margin: 0 30px;
 }
 .about-section .content-text-section h4 {
-    color: rgb(247, 244, 237);
+    color: rgb(134, 19, 100);
     font-size: 28px;
     text-transform: capitalize;
     margin-bottom: 23px;
     letter-spacing: 2px;
 }
 .about-section .content-text-section p{
-    color: #f7f4ed;
+    color: #862972;
     letter-spacing: 0.5px;
     line-height: 24px;
     font-size: 16px;
     margin-bottom: 45px;
 }
 .about-section .content-text-section button {
-    background: #124559;
+    background: #861364;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -565,7 +530,7 @@ body {
 .about-title {
     font-size: 20px;
     font-weight: bold;
-    color: #f2f2f2;
+    color: #861364;
 }
 .about-image img {
     position: relative;
@@ -595,10 +560,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(18, 69, 89, 0.8);
-    color: white;
+    background-color: rgb(145, 42, 115);
+    color: #fdfdfe;
     padding: 10px 20px;
-    border: 3px solid #01161e;
+    border: 3px solid #861364;
     border-radius: 5px;
     font-size: 18px;
     text-decoration: none;
@@ -628,7 +593,7 @@ body {
 
 }
 .footer {
-    background-color: #e2e3e5;
+    background-color: #fdfdfe;
 }
 
 .footer-header {
@@ -637,7 +602,7 @@ body {
     align-items: center;
     padding: 0 50px;
     margin-bottom: 30px;
-    background-color: #58A399;
+    background-color: #912a73;
     border-radius: 3px;
     box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.3);
 }
@@ -646,7 +611,7 @@ body {
 }
 .footer-logo-text {
     font-size: 34px;
-    color: #f2f2f2;
+    color: #fdfdfe;
     font-weight: bold;
 }
 
@@ -659,7 +624,7 @@ body {
 
 .social-icon {
     margin-right: 10px;
-    color: #58A399;
+    color: #c287b0;
 }
 
 .footer-content {
@@ -705,22 +670,62 @@ body {
 .footer-newsletter form input {
     width: calc(100% - 20px);
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #861364;
     border-radius: 5px;
 }
 
 .footer-newsletter form button {
     width: 30%;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #9e4282;
+    color: #fbfcfd;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 .footer-copyright {
     text-align: center;
     padding: 5px 50px 10px 50px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f6f6f7;
+}
+::-webkit-scrollbar-thumb {
+    background: #861364;
+    border-radius: 10px;
+    cursor: grab;
+}
+.news-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background: #861364;
+    border-radius: 6px;
+    cursor: grab;
+    transition: background-color 0.3s;
+}
+
+.news-container::-webkit-scrollbar-thumb:hover {
+    background: #6b0d4b;
+}
+
+.news-container::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
 

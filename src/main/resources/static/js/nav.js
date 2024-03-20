@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         sectionIndex = (sectionIndex < totalSlides - 1) ? sectionIndex + 1 : 0;
         setIndex();
     });
-        const sliderScrollbar = document.querySelector(".news-section .slider-scrollbar");
+    /*    const sliderScrollbar = document.querySelector(".news-section .slider-scrollbar");
         const scrollbarThumb = sliderScrollbar.querySelector('.scrollbar-thumb');
         const imageList = document.querySelector(".news-container ");
         const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
@@ -130,5 +130,5 @@ document.addEventListener("DOMContentLoaded", function () {
             isDragging = false;
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
-        };
+        };*/
 });
