@@ -15,7 +15,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    background-color: #fdfdfe;
+    background-color: #f3f3f3;
 
 }
 
@@ -279,10 +279,9 @@ body {
     margin: 65px auto;
     overflow: hidden;
     box-shadow: 0px 8px 20px 3px rgba(0, 0, 0, 0.4);
-
 }
 .carousel{
-    height: 600px;
+    height: 655px;
     overflow: hidden;
     position: relative;
 }
@@ -405,35 +404,54 @@ body {
 
 .news-section {
     margin-top: 40px;
+    margin-bottom: 65px;
     text-align: center;
 }
 
 .news-title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 20px;
     font-weight: bold;
     color: #861364;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+}
+.news-title::before,
+.news-title::after {
+    content: "";
+    position: absolute;
+    top: 49%;
+    width: 39%;
+    height: 4px;
+    background-color: #ddd;
+}
+.news-title::before {
+    left: 0;
+}
+
+.news-title::after {
+    right: 0;
 }
 
 .news-container {
     display: flex;
     gap: 20px;
-    padding: 15px 15px 20px;
+    padding: 15px 15px 40px;
     overflow-x: scroll;
+    background-color: #ffe8f4;
 }
 
 .news-box {
     flex: 0 0 auto;
-    width: 470px; /* Kutu genişliği */
-    height: 500px;
+    width: 400px;
+    height: 450px;
     padding: 10px;
-    background-color: #fdfdfe;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
-    transition: box-shadow 0.3s; /* Gölgelendirme için geçiş efekti */
+    background-color: #fafdf4;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
     cursor: pointer;
     border-radius: 10px;
-    border: 2px solid rgba(133, 19, 100, 0.9);
+    border: 2px solid rgba(133, 19, 100, 0.7);
 }
 
 .news-box.news-box-1 .news-image {
@@ -443,7 +461,6 @@ body {
     background-image: url("/static/images/box5.png");
 }
 .news-box.news-box-3 .news-image {
-
     background-image: url("/static/images/box6.png");
 }
 .news-box.news-box-4 .news-image {
@@ -461,20 +478,20 @@ body {
 }
 
 .news-image {
-    height: 300px; /* Görsel kutu yüksekliği */
+    height: 240px; /* Görsel kutu yüksekliği */
     background-size: cover;
     background-position: center;
     margin-bottom: 15px;
 }
 
-
 .news-content h3 {
     margin-bottom: 10px;
-    color: #333;
+    color: #6b0d4b;
 }
 
 .news-content p {
-    color: #666;
+    color: #912a73;
+    font-size: 15px;
 }
 
 .about-section {
@@ -498,6 +515,7 @@ body {
     margin: 15px;
     position: relative;
     box-shadow: 0px 6px 13px 3px rgba(0, 0, 0, 0.4);
+    background-color: #ffdff2;
 
 }
 .about-section .content-text-section {
@@ -587,19 +605,31 @@ body {
     grid-template-columns: minmax(0, 2fr) 1fr;
     gap: 15px;
     align-items: flex-start;
-    padding: 2% 5% 6% 5%;
-    margin: 50px 0;
+    padding: 1% 4% 4% 4%;
+    margin: 80px 0 50px 0;
 }
 .video-section .section-title {
-    font-size: 30px;
-    margin-bottom: 8px;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.video-section .section-title h3 {
+    font-size: 29px;
+    margin: 8px 0;
     font-weight: bold;
     color: #ffebee;
-    grid-column: 1 / -1;
     text-align: center;
 }
+.video-section .section-title .video-for-more {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffebee;
+    text-align: right;
+    margin-left: auto;
+}
 .video-section .main-video {
-    background: #ffebee;
+    background: #ffe5e6;
     border-radius: 5px;
     padding: 10px;
     grid-column: 1;
@@ -614,15 +644,15 @@ body {
     padding: 7px 7px 2px 7px;
 }
 .video-section .video-list {
-    background: #ffebee;
+    background: #ffe5e6;
     border-radius: 5px;
-    height: 541px;
+    height: 552px;
     overflow-y: scroll;
     grid-column: 2;
 }
 
 .video-section .video-list .list-video video {
-    width: 100px;
+    width: 120px;
     border-radius: 5px;
 }
 .video-section .video-list .list-video {
@@ -640,6 +670,7 @@ body {
 }
 .video-section .video-list .list-video.active {
     background: #912a73;
+    border-radius: 6px;
 }
 .video-section .video-list .list-video.active .title {
     color: #ffebee;
@@ -772,6 +803,7 @@ body {
 }
 .news-container::-webkit-scrollbar {
     height: 4px;
+    border-radius: 6px;
 }
 
 .news-container::-webkit-scrollbar-thumb {
