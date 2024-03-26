@@ -5,7 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeMenuIcon = document.querySelector('.close-menu-icon');
     var navbar = document.querySelector('.navbar');
     var lastScrollTop = 0;
+    var path = window.location.pathname;
+    var navLinks = document.querySelectorAll('.nav-links a');
 
+    navLinks.forEach(function (link) {
+        if (link.getAttribute('href') === path) {
+            link.classList.add('active-link');
+        } else {
+            link.classList.remove('active-link');
+        }
+    });
 
     function openMenu() {
         menuIcon.classList.add('active');
@@ -147,4 +156,5 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     })
+
 });

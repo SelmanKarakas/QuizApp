@@ -15,7 +15,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    background-color: #f3f3f3;
+    background-color: #fdfdfe;
 
 }
 
@@ -182,6 +182,10 @@ body {
     padding: 0;
     text-align: center;
     flex-grow: 1;
+}
+
+.nav-links li a.active-link::after {
+    width: 100%;
 }
 
 .nav-links li {
@@ -408,7 +412,7 @@ body {
     text-align: center;
 }
 
-.news-title {
+.news-headTitle {
     margin-bottom: 8px;
     font-size: 20px;
     font-weight: bold;
@@ -416,8 +420,8 @@ body {
     position: relative;
     text-align: center;
 }
-.news-title::before,
-.news-title::after {
+.news-headTitle::before,
+.news-headTitle::after {
     content: "";
     position: absolute;
     top: 49%;
@@ -425,11 +429,11 @@ body {
     height: 4px;
     background-color: #ddd;
 }
-.news-title::before {
+.news-headTitle::before {
     left: 0;
 }
 
-.news-title::after {
+.news-headTitle::after {
     right: 0;
 }
 
@@ -438,7 +442,7 @@ body {
     gap: 20px;
     padding: 15px 15px 40px;
     overflow-x: scroll;
-    background-color: #ffe8f4;
+    background-color: #fff1f9;
 }
 
 .news-box {
@@ -450,10 +454,17 @@ body {
     transition: box-shadow 0.3s;
     cursor: pointer;
     border-radius: 5px;
-    border: 2px solid rgba(133, 19, 100, 0.7);
+    /*border: 2px solid rgba(133, 19, 100, 0.7);*/
 }
 .news-box .news-content {
     padding: 7px;
+    display: flex;
+    flex-direction: column;
+}
+.news-content span {
+    color: #912a73;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
 .news-box.news-box-1 .news-image {
@@ -483,7 +494,7 @@ body {
     height: 240px; /* Görsel kutu yüksekliği */
     background-size: cover;
     background-position: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 4px 4px 4px 2px;
     position: relative;
 }
@@ -498,15 +509,28 @@ body {
     z-index: 1;
     pointer-events: none;
 }
-
-.news-content h3 {
-    margin-bottom: 10px;
+.news-content .news-title {
+    font-size: 1.1rem;
+    font-weight: bold;
     color: #6b0d4b;
 }
-
+.news-content a {
+    color: #6b0d4b;
+    text-decoration: none;
+}
+.news-content a:hover {
+    color: #9e4282;
+    transition: all ease 0.3s;
+}
 .news-content p {
-    color: #912a73;
+    color: #444444;
     font-size: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 3px 0px 18px 0px;
 }
 
 .about-section {
@@ -694,6 +718,108 @@ body {
 .video-section .video-list .list-video .title {
     color: #6b0d4b;
     font-size: 17px;
+}
+
+#haberler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 40px 40px 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.haberler-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.haberler-heading span {
+    color: #912a73;
+}
+.haberler-heading h3 {
+    font-size: 2.4rem;
+    color: #6b0d4b;
+    font-weight: bold;
+}
+.haberler-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+.haberler-box{
+    width: 370px;
+    background-color: #ffebf7;
+    border: 1px solid #ececec;
+    margin: 30px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.haberler-img {
+    width: 100%;
+    height: auto;
+
+}
+.haberler-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+}
+
+.haberler-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.haberler-text span {
+    color: #912a73;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.haberler-text .haberler-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #6b0d4b;
+}
+.haberler-text .haberler-title:hover {
+    color: #912a73;
+    transition: all ease 0.3s;
+}
+.haberler-text p {
+    color: #444444;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.haberler-text a {
+    color: #6b0d4b;
+    text-decoration: none;
+}
+.haberler-text a:hover {
+    color: #912a73;
+    transition: all ease 0.3s;
+}
+@media (max-width: 1100px){
+    .haberler-box {
+        width: 70%;
+    }
+}
+@media (max-width: 550px){
+    .haberler-box{
+        margin: 20px 10px;
+    }
+    #haberler{
+        padding:20px ;
+    }
 }
 @media (max-width: 768px) {
 
