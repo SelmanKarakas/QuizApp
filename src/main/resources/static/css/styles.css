@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -530,7 +529,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 3px 0px 18px 0px;
+    margin: 7px 0px 18px 0px;
 }
 
 .about-section {
@@ -783,7 +782,7 @@ body {
 }
 .haberler-text .haberler-title {
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #6b0d4b;
 }
 .haberler-text .haberler-title:hover {
@@ -807,6 +806,180 @@ body {
 .haberler-text a:hover {
     color: #912a73;
     transition: all ease 0.3s;
+}
+
+.gallery-page .video-section {
+    background: #fdfdfe;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 1% 4% 4% 4%;
+    margin: 80px 0 50px 0;
+}
+
+.gallery-page .video-section .section-title h3 {
+    font-size: 29px;
+    margin: 8px 0;
+    font-weight: bold;
+    color: #6b0d4b;
+    text-align: center;
+}
+.gallery-page .video-section .section-title .video-for-more {
+    font-weight: bold;
+    font-size: 18px;
+    color: #6b0d4b;
+    text-align: right;
+    margin-left: auto;
+}
+.gallery-page .video-section .main-video {
+    background: #6b0d4b;
+    border-radius: 5px;
+    padding: 10px;
+    grid-column: 1;
+}
+
+.gallery-page .video-section .main-video .video .title {
+    color: #f2f3f5;
+    font-size: 20px;
+    padding: 7px 7px 2px 7px;
+}
+.gallery-page .video-section .video-list {
+    background: #6b0d4b;
+    border-radius: 5px;
+    height: 552px;
+    overflow-y: scroll;
+    grid-column: 2;
+}
+
+.gallery-page .video-section .video-list .list-video {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #721456;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.gallery-page .video-section .video-list .list-video:hover {
+    background: #922a73;
+}
+.gallery-page .video-section .video-list .list-video.active {
+    background: #fdfdfe;
+    border-radius: 6px;
+}
+.gallery-page .video-section .video-list .list-video.active .title {
+    color: #6b0d4b;
+}
+.gallery-page .video-section .video-list .list-video .title {
+    color: #fdfdfe;
+    font-size: 17px;
+}
+.gallery-page .gallery-heading span{
+    color: #912a73;
+}
+
+.article {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #fdfdfe;
+}
+.article-banner {
+    margin-top: 30px;
+    width: 100%;
+    max-height: 50vh;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.article-banner img {
+    width: 100%;
+}
+
+.article-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.vertical-line {
+    height: 80px;
+    max-height: 100%;
+    width: 4px;
+    background-color: #6b0d4b;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.article-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #6b0d4b;
+}
+
+.article-published {
+    font-style: italic;
+    color: #922a73;
+    margin-bottom: 20px;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    margin: 20px 0;
+}
+
+.article-content p {
+    font-size: 1.125em;
+    line-height: 1.6;
+    color: #2a1e26;
+    font-weight: 500;
+}
+.article-page {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.share-buttons {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.share-buttons span {
+    margin-right: 10px;
+    color: #6b0d4b;
+}
+
+.share-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #6b0d4b;
+    color: #fff;
+    text-align: center;
+    line-height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.share-button:hover {
+    background-color: #922a73;
+}
+
+.share-button i {
+    font-size: 18px;
+}
+
+
+::selection{
+    background: #922a73;
+    color: #fff;
 }
 @media (max-width: 1100px){
     .haberler-box {
