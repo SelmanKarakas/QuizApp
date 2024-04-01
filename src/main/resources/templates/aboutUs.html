@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:replace="Navbar.html"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+<body>
+
+<div class="aboutUs-banner">
+  <img src="/images/img.png" alt="Banner Image">
+</div>
+<main>
+  <section id="aboutUs">
+    <div class="aboutUs-container">
+      <div class="aboutUs-title"><h2>Hakkımızda</h2></div>
+      <div class="aboutUs-content">
+        <div class="aboutUs-section">
+          <div class="aboutUs-text">
+            <h3>Biz Kimiz?</h3>
+            <div class="vertical-line"></div>
+            <p>Firma adı olarak sektörde XX yıldır hizmet vermekteyiz. Müşteri memnuniyetini ön planda tutan anlayışımızla, kaliteli ve yenilikçi hizmetler sunmayı amaçlıyoruz.</p>
+            <p>Ekibimiz uzman ve deneyimli kişilerden oluşmaktadır. Alanlarında uzmanlaşmış ekip arkadaşlarımızla birlikte, projelerinizin başarılı bir şekilde tamamlanmasını sağlıyoruz.</p>
+            <p>Amacımız, müşterilerimize en iyi hizmeti sunmak ve onların beklentilerini karşılamaktır. Sektördeki gelişmeleri yakından takip ederek, sürekli olarak kendimizi yenilemekteyiz.</p>
+          </div>
+          <div class="aboutUs-image">
+            <img src="/images/img.png" alt="Firma Hakkında">
+          </div>
+        </div>
+        <div class="aboutUs-section">
+          <div class="aboutUs-image">
+            <img src="/images/img_1.png" alt="Firma Hakkında">
+          </div>
+          <div class="aboutUs-text">
+            <h3>Biz Kimiz?</h3>
+            <div class="vertical-line"></div>
+            <p>Ekibimiz uzman ve deneyimli kişilerden oluşmaktadır. Alanlarında uzmanlaşmış ekip arkadaşlarımızla birlikte, projelerinizin başarılı bir şekilde tamamlanmasını sağlıyoruz.</p>
+            <p>Ekibimiz uzman ve deneyimli kişilerden oluşmaktadır. Alanlarında uzmanlaşmış ekip arkadaşlarımızla birlikte, projelerinizin başarılı bir şekilde tamamlanmasını sağlıyoruz.</p>
+            <p>Firma adı olarak sektörde XX yıldır hizmet vermekteyiz. Müşteri memnuniyetini ön planda tutan anlayışımızla, kaliteli ve yenilikçi hizmetler sunmayı amaçlıyoruz.</p>
+            <p>Ekibimiz uzman ve deneyimli kişilerden oluşmaktadır. Alanlarında uzmanlaşmış ekip arkadaşlarımızla birlikte, projelerinizin başarılı bir şekilde tamamlanmasını sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+
+
+<div class="campus-title"><h2>YERLEŞKEMİZ</h2></div>
+<div class="campus-section">
+  <a href="../static/images/wonderlane-6zlgM-GUd6I-unsplash.jpg" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 8">
+    <img src="../static/images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Campus Image 1">
+  </a>
+  <a href="../static/images/img_1.png" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 7">
+    <img src="../static/images/img_1.png" alt="Campus Image 2">
+  </a>
+  <a href="../static/images/img.png" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 6">
+    <img src="../static/images/img.png" alt="Campus Image 3">
+  </a>
+  <a href="../static/images/istockphoto-1756562035-170667a.webp" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 5">
+    <img src="../static/images/istockphoto-1756562035-170667a.webp" alt="Campus Image 4">
+  </a>
+  <a href="../static/images/istockphoto-1756562035-170667a.webp" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 4">
+    <img src="../static/images/istockphoto-1756562035-170667a.webp" alt="Campus Image 4">
+  </a>
+  <a href="../static/images/istockphoto-1756562035-170667a.webp" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 3">
+    <img src="../static/images/istockphoto-1756562035-170667a.webp" alt="Campus Image 4">
+  </a>
+  <a href="../static/images/istockphoto-1756562035-170667a.webp" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 2">
+    <img src="../static/images/istockphoto-1756562035-170667a.webp" alt="Campus Image 2">
+  </a>
+  <a href="../static/images/wonderlane-6zlgM-GUd6I-unsplash.jpg" class="campus-image" data-lightbox="campus-gallery" data-title="Campus Image 1">
+    <img src="../static/images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Campus Image 1">
+  </a>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script type="text/javascript" th:src="@{/js/nav.js}"></script>
+</body>
+<footer th:replace="footer.html"></footer>
+</html>
