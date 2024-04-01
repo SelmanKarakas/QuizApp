@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:replace="Navbar.html"></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+</head>
+<body>
+
+<div class="gallery-page">
+    <div class="video-container">
+        <div class="main-video">
+            <div class="video">
+                <video src="/images/video.mp4"></video>
+                <h3 class="title">Ana Video</h3>
+            </div>
+        </div>
+        <div class="section-title">
+            <h3>TÜM VİDEOLAR</h3>
+        </div>
+        <div class="video-all">
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">02. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">03. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">04. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">05. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">06. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">07. Video title goes here </h3>
+            </div>
+            <div class="video">
+                <video src="/images/video.mp4" muted></video>
+                <h3 class="title">08. Video title goes here </h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" th:src="@{/js/nav.js}"></script>
+</body>
+<footer th:replace="footer.html"></footer>
+</html>
